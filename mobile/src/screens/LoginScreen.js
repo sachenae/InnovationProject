@@ -50,8 +50,7 @@ class LoginScreen extends Component {
   onFacebookPress = async () => {
     try {
       const token = await FacebookApi.loginAsync();
-
-      console.log('token', token);
+      await this.props.authStore.login(token, 'FACEBOOK');
     } catch (error) {
       console.log('error', error);
     }

@@ -46,12 +46,12 @@ const LINKS = [
 
 @inject('authStore')
 class ProfileScreen extends Component {
-  static navigationOptions = ({ navigation }) => ({
-    title: 'My Profile',
-    headerLeft: (
-      <CloseBtn left size={25} onPress={() => navigation.goBack(null)} />
-    )
-  });
+  // static navigationOptions = ({ navigation }) => ({
+  //   title: 'My Profile',
+  //   headerLeft: (
+  //     <CloseBtn left size={25} onPress={() => navigation.goBack(null)} />
+  //   )
+  // });
  static navigationOptions = ({ navigation }) => {
    const {params = {} } = navigation.state;
    const headerRight = (
@@ -114,18 +114,5 @@ class ProfileScreen extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  logoutBtn: {
-    borderWidth: 1,
-    borderColor: theme.color.green,
-    borderRadius: 6,
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '90%',
-    alignSelf: 'center',
-    height: 40,
-    marginTop: 20,
-  },
-});
 
 export default ProfileScreen;
